@@ -1,0 +1,8 @@
+Boburjon
+Boburjon
+Boburjon
+Boburjon
+Boburjon.
+This is the text that I want to append to the file.
+This is the text that I want to append to the file.
+Boburjon

@@ -1,0 +1,51 @@
+create type user_role as enum('company','candidate');
+
+create table u_user(id int generated always as identity primary key,
+                    username varchar,
+                    phone varchar(14),
+                    email varchar check ( email like '%@gmail.com'),
+                    role user_role);
+insert into u_user(username, phone, email, role) VALUES ('sanjar','+998905643434','snj@gmail.com','candidate');
+insert into u_user(username, phone, email, role) VALUES ('baxtiyorjon','+998903441450','bxt@gmail.com','candidate');
+
+create table company_description
+(
+    id int generated always as identity primary key,
+    company_id int,
+    information_text text,
+    website_link text check (website_link ilike 'www.%') ,
+    main_office_location varchar,
+    number_of_worker int,
+    owner varchar
+);
+insert into company_description (company_id, information_text, website_link, main_office_location, number_of_worker,
+                                 owner)
+values (1,' bu yerda nimadir yozilgan boladi ','www.nimadur.com','Uzbekistan/Tashkent',24,'Azizbek Abdurahmonov');
+
+create table  candidate_resume(
+                id serial primary key,
+                candidate_id int references u_user(id),
+                information text,
+                linkedin_link text check ( linkedin_link like 'https://www.linkedin.com/%'),
+                address varchar,
+                age int);
+
+create table candidate_skills(id serial primary key,
+                              resume_id int references candidate_resume(id),
+                              skill_name varchar,
+                              level int);
+
+create table candidate_job_history(id serial primary key ,
+                                   candidate_id int references u_user(id),
+                                   job_title varchar,
+                                   company_name varchar,
+                                   from_date date,
+                                   to_date date,
+                                   information_about_job text);
+
+create table candidate_education(id serial primary key ,
+                                candidate_id int references u_user(id),
+                                 school_name varchar,
+                                 from_date date,
+                                 to_date date,
+                                 about_courses text);

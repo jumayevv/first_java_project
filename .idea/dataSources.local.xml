@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="IU-232.10227.8">
+    <data-source name="postgres@localhost" uuid="75d42f88-d1dc-47cd-ae18-904d910ae79f">
+      <database-info product="PostgreSQL" version="16.1" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.6.0" dbms="POSTGRES" exact-version="16.1" exact-driver-version="42.6">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node negative="1">
+            <node kind="database" qname="@">
+              <node kind="schema" qname="@" />
+            </node>
+            <node kind="database">
+              <name qname="myj_database" />
+              <name qname="uyga_vazifa" />
+              <name qname="ombor" />
+              <node kind="schema" qname="public" />
+            </node>
+            <node kind="database" qname="poligon">
+              <node kind="schema">
+                <name qname="public" />
+                <name qname="public_2" />
+              </node>
+            </node>
+            <node kind="database">
+              <name qname="java_n7" />
+              <name qname="kutubxona" />
+              <name qname="yangilik" />
+            </node>
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+  </component>
+</project>
