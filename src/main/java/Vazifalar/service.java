@@ -260,6 +260,10 @@ public class service {
         System.out.println("  Data Successfully Added ");
     }
 
+    public static void insert_vacancy(){
+
+    }
+
     public static void main(String[] args) throws SQLException {
         start_up_menu();
     }
